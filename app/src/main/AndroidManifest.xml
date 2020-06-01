@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.medicareapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".measurements.Temperature_2"></activity>
+        <activity android:name=".measurements.Thyroid_2" />
+        <activity android:name=".measurements.Blood_group" />
+        <activity android:name=".measurements.Thyroid" />
+        <activity android:name=".measurements.Spo2" />
+        <activity android:name=".measurements.Symptoms" />
+        <activity android:name=".measurements.Food_intake" />
+        <activity android:name=".measurements.Exercise" />
+        <activity android:name=".measurements.Heart_rate" />
+        <activity android:name=".measurements.Blood_pressure" />
+        <activity android:name=".measurements.Blood_glucose" />
+        <activity android:name=".measurements.Temperature" />
+        <activity android:name=".measurements.Weight" />
+        <activity android:name=".measurements.Height" />
+        <activity android:name=".new_log" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

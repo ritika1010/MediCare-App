@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".measurements.Thyroid_2"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thyroid Record"
+        android:textSize="25dp"
+        android:layout_margin="25dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#C8E0474C"
+        android:padding="15dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="RECORD"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="#ffffff" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:showDividers="beginning|end|middle"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Select Time"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:background="#C8E04747"/>
+
+            <TextView
+                android:id="@+id/time_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="day-time"
+                android:padding="10dp"
+                android:clickable="true"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="0.0"
+
+            android:textColor="#C8E0474C"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_value"
+            android:paddingTop="4dp"
+            android:text="ng/dL"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/gv_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="50dp"
+        app:zjun_textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T3"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:padding="5dp"
+            />
+        <EditText
+            android:id="@+id/t3_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:padding="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/t3_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ng/dL"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:layout_marginLeft="40dp"
+            android:id="@+id/show_button1"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:onClick="onClick"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T4"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:padding="5dp"
+            />
+        <EditText
+            android:id="@+id/t4_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/t4_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="µg/dL" />
+        <Button
+            android:layout_marginLeft="40dp"
+            android:id="@+id/show_button2"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:onClick="onClick"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/t3_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free T3"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:padding="5dp"
+            />
+        <EditText
+            android:id="@+id/t3_free_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/t3_free_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="pg/dL" />
+        <Button
+            android:layout_marginLeft="40dp"
+            android:id="@+id/show_button3"
+            android:layout_width="40dp"
+            android:onClick="onClick"
+            android:layout_height="25dp"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/t4_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free T4"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:padding="5dp"
+            />
+        <EditText
+            android:id="@+id/t4_free_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/t4_free_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="µg/dL" />
+        <Button
+            android:layout_marginLeft="40dp"
+            android:id="@+id/show_button4"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:onClick="onClick"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/tsh_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TSH"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:padding="5dp"
+            />
+        <EditText
+            android:id="@+id/tsh_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tsh_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="µIU/ml" />
+        <Button
+            android:layout_marginLeft="40dp"
+            android:id="@+id/show_button5"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:onClick="onClick"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

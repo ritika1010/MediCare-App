@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MediCare App</string>
+    <string name="title_log">Log</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_activities">Activities</string>
+</resources>
