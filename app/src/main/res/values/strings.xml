@@ -4,4 +4,24 @@
     <string name="title_profile">Profile</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_activities">Activities</string>
+
+    <string name="time_display">Select Time</string>
+
+    <string name="record_button">Record</string>
+    <string name="change_button">Change</string>
+
+    <string name="bloodpressure_record">Blood Pressure Record</string>
+    <string name="bloodglucose_record">Blood Glucose Record</string>
+    <string name="temperature_record">Temperature Record</string>
+    <string name="bloodgroup_record">Blood Group Record</string>
+    <string name="thyroid_record">Thyroid Record</string>
+    <string name="height_record">Height Record</string>
+    <string name="weight_record">Weight Record</string>
+    <string name="exercise_record">Exercise Record</string>
+    <string name="spo2_record">Spo2 Record</string>
+    <string name="heartrate_record">Heart Rate Record</string>
+    <string name="foodintake_record">Food Intake record</string>
+    <string name="symptoms_record">Symptoms Record</string>
+
+
 </resources>

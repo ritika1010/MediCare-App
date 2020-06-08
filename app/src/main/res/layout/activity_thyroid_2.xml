@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".measurements.Thyroid_2"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    tools:context=".measurements.Thyroid2Activity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thyroid Record"
-        android:textSize="25dp"
         android:layout_margin="25dp"
+        android:text="@string/thyroid_record"
         android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        />
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -34,16 +33,15 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="RECORD"
+                android:text="@string/record_button"
                 android:textColor="@color/colorPrimary"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -51,14 +49,14 @@
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
                 android:src="@android:drawable/arrow_down_float"
-                android:tint="#ffffff" />
+                android:tint="#ffffff"
+                android:contentDescription="@string/record_button" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -71,32 +69,32 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:layout_gravity="center"
-            android:showDividers="beginning|end|middle"
-            >
+            android:showDividers="beginning|end|middle">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Select Time"
-                android:textSize="18dp"
+                android:background="#C8E04747"
                 android:padding="10dp"
-                android:textStyle="bold"
-                android:background="#C8E04747"/>
+                android:text="@string/time_display"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/time_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="true"
                 android:hint="day-time"
                 android:padding="10dp"
-                android:clickable="true"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:focusable="true" />
 
 
         </LinearLayout>
@@ -139,45 +137,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="beginning|end|middle"
         android:layout_margin="10dp"
-        >
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle">
+
         <TextView
             android:id="@+id/t3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="T3"
             android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="5dp"
-            />
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/t3_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
             android:inputType="numberDecimal"
-            android:singleLine="true"
             android:padding="5dp"
-            />
+            android:singleLine="true" />
 
 
         <TextView
             android:id="@+id/t3_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ng/dL"
             android:padding="5dp"
-            />
+            android:text="ng/dL" />
 
         <Button
-            android:layout_marginLeft="40dp"
             android:id="@+id/show_button1"
             android:layout_width="40dp"
             android:layout_height="25dp"
-            android:onClick="onClick"
+            android:layout_marginStart="40dp"
             android:background="@android:drawable/dialog_holo_dark_frame"
+            android:onClick="onClick"
             android:padding="5dp" />
 
     </LinearLayout>
@@ -185,28 +181,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="beginning|end|middle"
         android:layout_margin="10dp"
-        >
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle">
+
         <TextView
             android:id="@+id/t4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="T4"
             android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="5dp"
-            />
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/t4_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
             android:inputType="numberDecimal"
-            android:singleLine="true"
             android:padding="5dp"
-            />
+            android:singleLine="true" />
 
         <TextView
             android:id="@+id/t4_unit"
@@ -214,13 +209,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="µg/dL" />
+
         <Button
-            android:layout_marginLeft="40dp"
             android:id="@+id/show_button2"
             android:layout_width="40dp"
             android:layout_height="25dp"
-            android:onClick="onClick"
+            android:layout_marginStart="40dp"
             android:background="@android:drawable/dialog_holo_dark_frame"
+            android:onClick="onClick"
             android:padding="5dp" />
 
     </LinearLayout>
@@ -228,28 +224,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="beginning|end|middle"
         android:layout_margin="10dp"
-        >
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle">
+
         <TextView
             android:id="@+id/t3_free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="Free T3"
             android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="5dp"
-            />
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/t3_free_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
             android:inputType="numberDecimal"
-            android:singleLine="true"
             android:padding="5dp"
-            />
+            android:singleLine="true" />
 
         <TextView
             android:id="@+id/t3_free_unit"
@@ -257,13 +252,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="pg/dL" />
+
         <Button
-            android:layout_marginLeft="40dp"
             android:id="@+id/show_button3"
             android:layout_width="40dp"
-            android:onClick="onClick"
             android:layout_height="25dp"
+            android:layout_marginStart="40dp"
             android:background="@android:drawable/dialog_holo_dark_frame"
+            android:onClick="onClick"
             android:padding="5dp" />
 
     </LinearLayout>
@@ -271,28 +267,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="beginning|end|middle"
         android:layout_margin="10dp"
-        >
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle">
+
         <TextView
             android:id="@+id/t4_free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="Free T4"
             android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="5dp"
-            />
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/t4_free_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
             android:inputType="numberDecimal"
-            android:singleLine="true"
             android:padding="5dp"
-            />
+            android:singleLine="true" />
 
         <TextView
             android:id="@+id/t4_free_unit"
@@ -300,13 +295,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="µg/dL" />
+
         <Button
-            android:layout_marginLeft="40dp"
             android:id="@+id/show_button4"
             android:layout_width="40dp"
             android:layout_height="25dp"
-            android:onClick="onClick"
+            android:layout_marginStart="40dp"
             android:background="@android:drawable/dialog_holo_dark_frame"
+            android:onClick="onClick"
             android:padding="5dp" />
 
     </LinearLayout>
@@ -314,19 +310,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="beginning|end|middle"
         android:layout_margin="10dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning|end|middle">
+
         <TextView
             android:id="@+id/tsh_free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="TSH"
             android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="5dp"
-            />
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/tsh_et"
             android:layout_width="wrap_content"
@@ -334,9 +331,8 @@
             android:ems="5"
 
             android:inputType="numberDecimal"
-            android:singleLine="true"
             android:padding="5dp"
-            />
+            android:singleLine="true" />
 
         <TextView
             android:id="@+id/tsh_unit"
@@ -344,13 +340,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="µIU/ml" />
+
         <Button
-            android:layout_marginLeft="40dp"
             android:id="@+id/show_button5"
             android:layout_width="40dp"
             android:layout_height="25dp"
-            android:onClick="onClick"
+            android:layout_marginStart="40dp"
             android:background="@android:drawable/dialog_holo_dark_frame"
+            android:onClick="onClick"
             android:padding="5dp" />
 
     </LinearLayout>

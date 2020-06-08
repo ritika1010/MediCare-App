@@ -17,14 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 
-public class LogAdapter extends RecyclerView.Adapter<LogAdapter.ProductViewHolder> {
+public class LogAdapter extends RecyclerView.Adapter<LogAdapter.LogViewHolder> {
 
 
     //this context we will use to inflate the layout
     private Context mCtx;
 
     //we are storing all the products in a list
-    private List<Log_data> logList;
+    private List<LogModel> logList;
     private onItemClickListener mListener;
 
     public interface onItemClickListener{
@@ -36,29 +36,29 @@ public class LogAdapter extends RecyclerView.Adapter<LogAdapter.ProductViewHolde
         mListener=listener;
     }
     //getting the context and product list with constructor
-    public LogAdapter(Context mCtx, List<Log_data> logList) {
+    public LogAdapter(Context mCtx, List<LogModel> logList) {
         this.mCtx = mCtx;
         this.logList = logList;
     }
 
     @Override
-    public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LogViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.layout_log, null);
-        return new ProductViewHolder(view,mListener);
+        return new LogViewHolder(view,mListener);
     }
 
     @Override
-    public void onBindViewHolder(ProductViewHolder holder, int position) {
+    public void onBindViewHolder(LogViewHolder holder, int position) {
         //getting the product of the specified position
-        Log_data log_data = logList.get(position);
+        LogModel logModel = logList.get(position);
 
         //binding the data with the viewholder views
-        holder.textViewTitle.setText(log_data.getLog_name());
+        holder.textViewTitle.setText(logModel.getLog_name());
         //holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
-        Log.e("image",log_data.getImage_name());
-        int i=mCtx.getResources().getIdentifier(log_data.getImage_name(),"drawable",mCtx.getPackageName());
+        Log.e("image",logModel.getImage_name());
+        int i=mCtx.getResources().getIdentifier(logModel.getImage_name(),"drawable",mCtx.getPackageName());
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(i));
 
     }
@@ -70,12 +70,12 @@ public class LogAdapter extends RecyclerView.Adapter<LogAdapter.ProductViewHolde
     }
 
 
-    class ProductViewHolder extends RecyclerView.ViewHolder {
+    class LogViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewTitle;
         ImageView imageView;
 
-        public ProductViewHolder(View itemView, final onItemClickListener listener) {
+        public LogViewHolder(View itemView, final onItemClickListener listener) {
             super(itemView);
 
             textViewTitle = itemView.findViewById(R.id.text_log);

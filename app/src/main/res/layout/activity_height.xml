@@ -4,26 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".measurements.Height"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    tools:context=".measurements.HeightActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:text="Height Record"
+            android:text="@string/height_record"
             android:textColor="@color/colorPrimary"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
@@ -37,16 +38,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="RECORD"
+                    android:text="@string/record_button"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -61,7 +61,6 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -74,31 +73,31 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:padding="10dp"
-                android:layout_gravity="center"
-                android:showDividers="beginning|end|middle"
-                >
+                android:showDividers="beginning|end|middle">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Select Time"
-                    android:textSize="18dp"
+                    android:background="#C8E04747"
                     android:padding="10dp"
-                    android:textStyle="bold"
-                    android:background="#C8E04747"/>
+                    android:text="@string/time_display"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/time_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:hint="day-time"
                     android:padding="10dp"
-                    android:clickable="true"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
 
@@ -114,11 +113,11 @@
                 android:id="@+id/tv_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_money_indicator"
                 android:layout_centerInParent="true"
                 android:text="0"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp" />
+                android:textSize="28sp" />
+
             <TextView
                 android:id="@+id/tv_unit"
                 android:layout_width="wrap_content"
@@ -137,17 +136,12 @@
             android:layout_height="60dp" />
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-android:orientation="horizontal"
-    android:gravity="end">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change"
-        android:id="@+id/button"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/change_button" />
 
 
     </LinearLayout>

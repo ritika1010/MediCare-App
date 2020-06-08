@@ -109,12 +109,12 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Serializable {
             return false;
     }
 
-    public Log_data[] give_display(String table_name)
+    public LogModel[] give_display(String table_name)
     {
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cursor= (Cursor) db.rawQuery("SELECT * FROM "+ table_name ,null);
 
-        Log_data p[]=new Log_data[15];
+        LogModel logModels[]=new LogModel[15];
 
         if(cursor.moveToFirst())
         {
@@ -123,11 +123,11 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Serializable {
                 int id = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
                 String log_name = cursor.getString(cursor.getColumnIndex("log_name"));
                 String image_name = cursor.getString(cursor.getColumnIndex("image_name"));
-                p[i] = new Log_data(id, log_name, image_name);
+                logModels[i] = new LogModel(id, log_name, image_name);
                 i++;
             }while(cursor.moveToNext());
         }
-        return p;
+        return logModels;
     }
 
     public void recent_used(int id)

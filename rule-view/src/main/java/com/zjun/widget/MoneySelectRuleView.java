@@ -17,18 +17,7 @@ import android.widget.Scroller;
 
 import androidx.annotation.Nullable;
 
-/**
- * MoneySelectRuleView
- * 金额选择卷尺控件
- *
- * 每隔固定100
- *
- * 参考：{@link RuleView}
- *
- * Author: Ralap
- * Description:
- * Date 2018/8/9
- */
+
 public class MoneySelectRuleView extends View {
 
     private static final boolean LOG_ENABLE = BuildConfig.DEBUG;
